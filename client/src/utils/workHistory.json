@@ -1,0 +1,16 @@
+[
+    {
+        "company": "Quest Analytics",
+        "title": "Software Engineer Intern",
+        "dates": "May 2023 - Present",
+        "description": "Collaborated closely with the Enterprise Architect to analyze, enhance, and document the architecture specifications of several products. Demonstrated strong leadership skills by spearheading a solo-project that automated the scoring of software architecture specification sheets. This allowed executives and the architecture team to visualize the company's application inventory and assess architecture readiness. The project encompassed an API, a business logic background worker, and a user interface (UI). Emphasized SOLID principles to ensure the scalability and maintainability of the solution. Produced high-quality, production-ready code across the company's technology stack, including C# .NET 6 MVC, JavaScript, React, and MsSQL. Leveraged popular libraries such as Newtonsoft and Redux. Implemented robust Object-Oriented paradigms to ensure efficient data management and optimized usage. Demonstrated commitment to Agile methodologies by actively participating in daily standups, ensuring alignment with sprint goals and meeting stakeholder requirements.",
+        "supervisor": "Amit Sinha"
+    },
+    {
+        "company": "Associated Pools/Concrete Inc.",
+        "title": "Business Administrator",
+        "dates": "Mar 2020 - Jan 2023",
+        "description": "Analyzed market trends to help increase sales by 250% over two years. Designed and built network infrastructure, as well as automation tools with Python and JavaScript to increase productivity and accuracy in several departments. Developed a modern React/Express website to drive customer engagement. Negotiated a tested business plan to key stakeholders and investors to secure startup capital. Spearheaded business startup once capital was secured. Analyzed metrics with tools such as Python pandas/numpy, Jupyter Notebooks and Excel in contrast with projections to devise and propose plans for improvement.",
+        "supervisor": "Shawn Kays"
+    }
+]

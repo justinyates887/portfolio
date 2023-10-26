@@ -6,7 +6,7 @@ export const fetchRepositories = async () => {
   };
 
   try {
-    const response = await axios.get('https://api.github.com/user/repos', { headers });
+    const response = await axios.get('https://api.github.com/user/repos?page=1&per_page=1000', { headers });
     return response.data;
   } catch (error) {
     console.error('Axios Error:', error);

@@ -44,6 +44,8 @@ function formatLanguage(language){
       return "#0c192380"
     case "C++":
       return "#6e49e180"
+    case "TypeScript":
+      return "#3f939a"
     default:
       return "rgba(0, 0, 0, 0.08)"
   }
