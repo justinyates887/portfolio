@@ -1,4 +1,4 @@
 {
     "devServerURL": "http://localhost:8000",
-    "prodServerURL": ""
+    "prodServerURL": "https://justinyates.netlify.app"
 }
