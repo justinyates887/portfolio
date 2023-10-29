@@ -1,6 +1,6 @@
 const initialState = {
     repos: [],
-    filter: ""
+    filter: "updated_at"
 }
 
 const rootReducer = (state = initialState, action) => {

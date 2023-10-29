@@ -1,15 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Chip, Card, CardContent, Typography } from '@mui/material';
 
 export function WorkHistoryCard(props) {
   return (
     <Card 
-    sx={{
+      sx={{
         width: '70%',
         background: '#353535',
         color: 'white',
@@ -29,6 +24,12 @@ export function WorkHistoryCard(props) {
         <Typography variant="body2">
           {props.description}
         </Typography>
+        {props.tags?.map((tag) => (
+          <Chip
+            sx={{ fontSize: 12, color: 'inherit', marginTop: "10px"}}
+            label={tag}
+          />
+        ))}
       </CardContent>
     </Card>
   );

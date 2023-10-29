@@ -1,8 +1,10 @@
 import axios from 'axios';
+import config from '../config.json'
+require('dotenv').config()
 
 export const fetchRepositories = async () => {
   const headers = {
-    Authorization: `Bearer `,
+    Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
   };
 
   try {
@@ -13,3 +15,13 @@ export const fetchRepositories = async () => {
     return [];
   }
 };
+
+export const postMailer = async (event) => {
+  try {
+    const response = await axios.post(`${config.devServerURL}/send`, event);
+    return response.status;
+  } catch (error) {
+    throw error;
+  }
+};
+

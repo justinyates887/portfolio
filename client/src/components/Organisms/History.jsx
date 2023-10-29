@@ -29,6 +29,7 @@ export function History() {
                 title={item.title}
                 description={item.description}
                 supervisor={item.supervisor}
+                tags={item?.tags}
             />
             </TimelineContent>
         </TimelineItem>

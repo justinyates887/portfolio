@@ -78,3 +78,104 @@ code {
     rgba(0, 0, 0, 0.5) 100%
   );
 }
+
+@keyframes glossyAnimation {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes sway {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-12px);
+  }
+}
+
+.error {
+  min-height: 90vh;
+  margin-top: 0;
+  background: linear-gradient(to bottom, #0a1a27, #4e83b7);
+  position: relative;
+}
+
+.stage{
+  height: 0;
+}
+
+#mountains {
+  z-index: 2;
+  position: absolute;
+  bottom: 20%;
+  margin-bottom: -16px;
+  left: 10%;
+}
+
+#cloud1 {
+  z-index: 2;
+  position: absolute;
+  top: 20%;
+  right: 4%;
+  animation: bounce 2s ease-in-out 0s infinite alternate;
+}
+
+#cloud2 {
+  z-index: 1;
+  position: absolute;
+  top: 22%;
+  right: 16%;
+  animation: bounce 3.5s ease-in-out 2s infinite alternate;
+}
+
+.trees {
+  width: 100%;
+  height: 130px;
+  z-index: 4;
+  position: absolute;
+  bottom: 20%;
+  margin-bottom: -100px;
+}
+
+#ground {
+  z-index: 1;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  background: #879759;
+  background: linear-gradient(to bottom, #879759, #648459);
+}
+
+#hills {
+  position: absolute;
+  left: 10%;
+  margin-left: -120px;
+  margin-bottom: -86px;
+  bottom: 20%;
+  z-index: 3;
+}
+
+#stars {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes sway {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

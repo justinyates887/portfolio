@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Projects } from './components/Organisms/Projects';
-import { History, Home } from './components/Organisms';
+import { Error, History, Home } from './components/Organisms';
 import { Contact } from './components/Organisms';
 
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Contact" exact element={<Contact />} />
           <Route path="/History" exact element={<History />} />
+          <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   );

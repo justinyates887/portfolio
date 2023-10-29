@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { postMailer } from './axios'
 
 const initialFormValues = {
     fullName: "",
@@ -47,10 +48,20 @@ export const useFormControls = () => {
       const handleFormSubmit = async (e: any) => {
         e.preventDefault();
         if (formIsValid()) {
-          //await postContactForm(values);
-          alert("Contact sent!")
+          try {
+            const response = await postMailer(values);
+            if (response === 200) {
+              console.log("Response: " + response);
+              alert("Contact sent!");
+            } else {
+              alert("Something went wrong");
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred");
+          }
         }
-      };
+      };      
     const formIsValid = (fieldValues = values) => {
         const isValid =
           fieldValues.fullName &&

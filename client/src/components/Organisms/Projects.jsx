@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from "react";
-import { Navbar, GithubCard, Pagination } from "../Molecules";
+import { Navbar, GithubCard, Pagination, LoadingCard } from "../Molecules";
 import { useSelector, useDispatch } from "react-redux";
 import { setRepos } from "../../actionTypes/actionType";
 import { fetchRepositories } from "../../utils/axios";
-import {FilterDropdown} from "../Atoms";
+import { FilterDropdown } from "../Atoms";
 
 export function Projects() {
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
+  const [loaded, setLoaded] = useState(false);
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -15,6 +16,7 @@ export function Projects() {
       try {
         const data = await fetchRepositories();
         dispatch(setRepos(data));
+        setLoaded(true)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -50,13 +52,13 @@ export function Projects() {
   const endIndex = startIndex + itemsPerPage;
   let displayedRepos = filteredRepos?.slice(startIndex, endIndex);
 
-  return (
+  return loaded ? (
     <>
       <Navbar />
       <div className="centered-container">
-      <div style={{ width: "70%", display: "flex", justifyContent: "flex-end", alignItems: "flex-end"}}>
-        <FilterDropdown />
-      </div>
+        <div style={{ width: "70%", display: "flex", justifyContent: "flex-end", alignItems: "flex-end"}}>
+          <FilterDropdown />
+        </div>
         {displayedRepos?.map((repo) => (
           <GithubCard 
             key={repo.id}
@@ -73,6 +75,16 @@ export function Projects() {
         <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
     </>
+  ) : (
+    <>
+      <Navbar />
+      <div className="centered-container" style={{marginTop: "60px"}}>
+        <LoadingCard />
+        <LoadingCard />
+        <LoadingCard />
+      </div>
+    </>
   );
+  
 }
 

@@ -1,0 +1,4 @@
+{
+    "devServerURL": "http://localhost:8000",
+    "prodServerURL": ""
+}
