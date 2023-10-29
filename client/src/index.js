@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import './assets/styles/index.css';
 import App from './App';
 import store from './utils/store';
+import 'path-browserify';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

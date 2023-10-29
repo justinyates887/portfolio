@@ -1,6 +1,5 @@
 import axios from 'axios';
 import config from '../config.json'
-require('dotenv').config()
 
 export const fetchRepositories = async () => {
   const headers = {
