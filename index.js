@@ -46,8 +46,25 @@ router.post('/send', (req, res, next) => {
     }
   })
 })
+
+router.get('/github-repos', async (req, res) => {
+  try {
+    const apiUrl = 'https://api.github.com/user/repos?page=1&per_page=1000';
+    const headers = {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    };
+    const response = await axios.get(apiUrl, { headers });
+
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Failed to fetch GitHub repos' });
+  }
+});
+
+
 const app = express()
 app.use(cors())
 app.use(express.json())
-app.use('/', router)
+app.use('/api', router)
 app.listen(8000)
