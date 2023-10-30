@@ -50,11 +50,11 @@ export const useFormControls = () => {
         if (formIsValid()) {
           try {
             const response = await postMailer(values);
-            if (response === 200) {
+            if (response.status === 200) {
               console.log("Response: " + response);
               alert("Contact sent!");
             } else {
-              alert("Something went wrong");
+              alert(response.message);
             }
           } catch (error) {
             console.error("Error:", error);
