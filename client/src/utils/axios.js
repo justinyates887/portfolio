@@ -7,7 +7,7 @@ export const fetchRepositories = async () => {
   };
 
   try {
-    const response = await axios.get(`${config.prodServerURL}/api/github`, { headers });
+    const response = await axios.get(`${config.prodServerURL}/api/github-repos`, { headers });
     return response.data;
   } catch (error) {
     console.error('Axios Error:', error);
