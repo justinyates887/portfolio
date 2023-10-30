@@ -7,7 +7,29 @@
         "supervisor": "Amit Sinha",
         "tags": [
             "C#",
-            ".NET"
+            ".NET 6.0",
+            "MVC.NET",
+            "React",
+            "Redux",
+            "MsSQL",
+            "PowerBI",
+            "DAX"
+        ]
+    },
+    {
+        "company": "Embassy Landscape",
+        "title": "Assistant Estimator",
+        "dates": "Feb 2023 - May 2023",
+        "description": "Orchestrated essential sales data insights through advanced Excel proficiency for both Executive and Sales teams. Meticulously examined labor trends to enhance operational efficiency. Pioneered automation scripts in Python, streamlining data entry processes and elevating productivity. Actively participated in pivotal marketing meetings, delivering innovative conceptual artwork and captivating landing pages. Conducted extensive research to identify and present cutting-edge technologies aimed at optimizing conversion rates and expanding outreach strategies.",
+        "supervisor": "Marc Donaleski",
+        "tags": [
+            "Python",
+            "JavaScript",
+            "React",
+            "HTML",
+            "CSS",
+            "DAX",
+            "Excel"
         ]
     },
     {
@@ -19,7 +41,10 @@
         "tags": [
             "React",
             "Python",
-            "Jupyter"
+            "Jupyter",
+            "NumPy",
+            "Pandas",
+            "Excel"
         ]
     }
 ]
