@@ -7,7 +7,7 @@ export const fetchRepositories = async () => {
   };
 
   try {
-    const response = await axios.get('https://api.github.com/user/repos?page=1&per_page=1000', { headers });
+    const response = await axios.get(`${config.prodServerURL}/.netlify/functions/api/github`, { headers });
     return response.data;
   } catch (error) {
     console.error('Axios Error:', error);
@@ -17,7 +17,7 @@ export const fetchRepositories = async () => {
 
 export const postMailer = async (event) => {
   try {
-    const response = await axios.post(`${config.prodServerURL}/.netlify/functions/mailer/api/send`, event);
+    const response = await axios.post(`${config.prodServerURL}/.netlify/functions/api/send`, event);
     return response;
   } catch (error) {
     throw error;
