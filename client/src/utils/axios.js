@@ -17,7 +17,7 @@ export const fetchRepositories = async () => {
 
 export const postMailer = async (event) => {
   try {
-    const response = await axios.post(`${config.prodServerURL}/api/send`, event);
+    const response = await axios.post(`${config.prodServerURL}/.netlify/functions/mailer/api/send`, event);
     return response.status;
   } catch (error) {
     throw error;
