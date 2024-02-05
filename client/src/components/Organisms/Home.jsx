@@ -17,7 +17,7 @@ export function Home() {
 
     const startDate = new Date('08/01/2019');
     const currentDate = new Date();
-    const yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
+    let yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
 
     if (currentDate.getMonth() < startDate.getMonth() || (currentDate.getMonth() === startDate.getMonth() && currentDate.getDate() < startDate.getDate())) {
         yearsDifference--;
