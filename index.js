@@ -50,7 +50,7 @@ router.post('/send', (req, res, next) => {
 
 router.get('/github-repos', async (req, res) => {
   try {
-    const apiUrl = 'https://api.github.com/user/repos?page=1&per_page=1000';
+    const apiUrl = 'https://api.github.com/user/repos';
     const headers = {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     };
